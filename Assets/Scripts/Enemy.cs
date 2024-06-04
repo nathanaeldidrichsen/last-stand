@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     public float slowdownFactor = 0.5f; // Set this to the fraction to slow down by (e.g., 0.5 for half speed)
     public int coinsToEarn;
     public int damage = 1;
+    private SpriteRenderer spriteRenderer;
 
     // List of waypoints to move through
     public List<Transform> waypoints;
@@ -25,7 +26,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
         speed = Random.Range(speed - speedDeviation, speed);
 
         // Ensure there are waypoints in the list
@@ -75,11 +76,13 @@ public class Enemy : MonoBehaviour
         // Flip the localScale.x based on the direction of movement
         if (direction.x > 0)
         {
-            transform.localScale = new Vector3(-Mathf.Abs(initialLocalScale.x), initialLocalScale.y, initialLocalScale.z);
+            /*transform.localScale = new Vector3(-Mathf.Abs(initialLocalScale.x), initialLocalScale.y, initialLocalScale.z);*/
+            spriteRenderer.flipX = true;
         }
         else if (direction.x < 0)
         {
-            transform.localScale = new Vector3(Mathf.Abs(initialLocalScale.x), initialLocalScale.y, initialLocalScale.z);
+            spriteRenderer.flipX = false;
+            /*transform.localScale = new Vector3(Mathf.Abs(initialLocalScale.x), initialLocalScale.y, initialLocalScale.z);*/
         }
     }
 
