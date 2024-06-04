@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: 516018f4e7b899844b2ae8183254d343
+guid: d389e7b3feafcb04e90ce99d55808904
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6754239384357436178
-    second: Castle_0
+      213: -1724822148711148119
+    second: king_0
   - first:
-      213: 6906767639317418099
-    second: Castle_1
-  - first:
-      213: 7803579835838553921
-    second: Castle_2
+      213: 1621781197010240220
+    second: king_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,8 +50,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.134375, y: 0.6388889}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -77,7 +74,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -89,7 +86,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +110,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,64 +121,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Castle_0
+      name: king_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 113
-        width: 50
-        height: 59
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee40c6fb01f1442a0800000000000000
-      internalID: -6754239384357436178
+      spriteID: 9a5985de4633018e0800000000000000
+      internalID: -1724822148711148119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Castle_1
+      name: king_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 81
-        width: 60
-        height: 93
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3709da70394c9df50800000000000000
-      internalID: 6906767639317418099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Castle_2
-      rect:
-        serializedVersion: 2
-        x: 172
-        y: 121
-        width: 12
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14fde8bf382eb4c60800000000000000
-      internalID: 7803579835838553921
+      spriteID: cd20437f769b18610800000000000000
+      internalID: 1621781197010240220
       vertices: []
       indices: 
       edges: []
