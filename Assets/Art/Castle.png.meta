@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: 7803579835838553921
     second: Castle_2
+  - first:
+      213: -1682882690250861636
+    second: Castle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -182,6 +185,27 @@ TextureImporter:
       bones: []
       spriteID: 14fde8bf382eb4c60800000000000000
       internalID: 7803579835838553921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 77
+        width: 60
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb391f80c1335a8e0800000000000000
+      internalID: -1682882690250861636
       vertices: []
       indices: 
       edges: []
