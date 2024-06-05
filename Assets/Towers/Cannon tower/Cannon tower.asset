@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1402cac2984227741839aa55ad32970b, type: 3}
+  m_Name: Cannon tower
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 270601367629545183, guid: 2808354d3f481f743a0c55a8ae84a4f6, type: 3}
+  damage: 4
+  purchasePrice: 30
+  sellPrice: 20
+  shootRange: 0.6
+  upgradePrice: 20
+  shootSpeed: 4
+  timeBetweenFire: 1
+  description: Is strong against armored enemies
+  fireDamage: 0
+  coldDamge: 0
+  lightDamge: 0
+  towerName: Cannon tower
+  slowDownDuration: 0
+  slowDownSpeedAmount: 0
+  towerSprite: {fileID: -6164834272971422932, guid: ee2b19561c17e474ebf52f8f1315c4fa, type: 3}
+  elementType: 4

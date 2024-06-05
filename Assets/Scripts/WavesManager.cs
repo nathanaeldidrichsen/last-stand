@@ -1,77 +1,95 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
 
 public class WavesManager : MonoBehaviour
 {
     public Wave[] waves; // Array of waves containing enemy prefabs
-    public float waitBetweenWaves = 10f; // Time to wait between waves
+    public float waitBetweenWaves = 4f; // Time to wait between waves
     public Transform spawnPoint;
 
-    private int currentWaveIndex = 0; // Index to keep track of the current wave
+    [SerializeField] private int currentWaveIndex = 0; // Index to keep track of the current wave
     private bool isSpawning = false; // Flag to prevent multiple wave spawns at the same time
+    [SerializeField] private int activeEnemies = 0; // Counter to track active enemies
+
+    private static WavesManager instance;
+    
+    // Public property to access the instance
+    public static WavesManager Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<WavesManager>();
+                if (instance == null)
+                {
+                    Debug.LogError("No instance of WavesManager found in the scene.");
+                }
+            }
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     private void Start()
     {
-        StartFirstWave();
-    }
-
-    public void SpawnEnemiesFromWave()
-    {
-        if (currentWaveIndex < waves.Length)
-        {
-            HUD.Instance.waveText.text = (currentWaveIndex + 1).ToString();
-            StartCoroutine(SpawnWave(waves[currentWaveIndex]));
-        }
+        StartCoroutine(WaitAndStartNextWave());
     }
 
     private IEnumerator SpawnWave(Wave wave)
     {
         isSpawning = true;
 
-        for (int i = 0; i < wave.enemiesToSpawn.Length; i++)
+        foreach (var enemy in wave.enemiesToSpawn)
         {
-            Instantiate(wave.enemiesToSpawn[i], spawnPoint.position, Quaternion.identity);
+            Instantiate(enemy, spawnPoint.position, Quaternion.identity);
+            activeEnemies++;
             yield return new WaitForSeconds(1f); // Wait 1 second before spawning the next enemy
         }
 
-        yield return new WaitForSeconds(waitBetweenWaves); // Wait for the specified time between waves
         isSpawning = false;
-        StartNextWave();
-    }
-
-    // Method to start the first wave
-    public void StartFirstWave()
-    {
-        if (!isSpawning && waves[0] != null)
-        {
-            currentWaveIndex = 0;
-            SpawnEnemiesFromWave();
-        }
     }
 
     public void StartNextWave()
     {
-        if (currentWaveIndex < waves.Length - 1)
+        if (currentWaveIndex < waves.Length)
         {
+            StartCoroutine(SpawnWave(waves[currentWaveIndex]));
             currentWaveIndex++;
-            SpawnEnemiesFromWave();
+            HUD.Instance.waveText.text = (currentWaveIndex).ToString();
         }
         else
         {
             Debug.Log("All waves completed!");
+            HUD.Instance.WonGame();
         }
     }
 
-    // Optionally, you can add a method to start the first wave
-    public void StartWaves()
+    // Method to notify that an enemy has died
+    public void OnEnemyDeath()
     {
-        if (!isSpawning)
+        activeEnemies--;
+        if (activeEnemies <= 0 && !isSpawning)
         {
-            currentWaveIndex = 0;
-            SpawnEnemiesFromWave();
+            StartCoroutine(WaitAndStartNextWave());
         }
+    }
+
+    private IEnumerator WaitAndStartNextWave()
+    {
+        yield return new WaitForSeconds(waitBetweenWaves);
+        StartNextWave();
     }
 }
-

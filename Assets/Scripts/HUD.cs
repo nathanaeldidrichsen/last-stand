@@ -1,18 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
 
     public TMPro.TextMeshProUGUI waveText;
     public TMPro.TextMeshProUGUI coinsText;
+    public TMPro.TextMeshProUGUI towerDescriptionText;
+    public TMPro.TextMeshProUGUI towerDamageText;
+    public TMPro.TextMeshProUGUI towerNameText;
+
+    public TMPro.TextMeshProUGUI towerSpeedText;
+    public TMPro.TextMeshProUGUI speedBtnText;
+
+    public TMPro.TextMeshProUGUI towerCostText;
+
+
+
+
     public GameObject deadMenu;
+    public GameObject wonMenu;
+
     public GameObject shopMenu;
     private bool isShopOpen;
-
+    [HideInInspector] public Animator anim;
 
     private static HUD instance;
 
@@ -35,6 +47,11 @@ public class HUD : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -55,8 +72,15 @@ public class HUD : MonoBehaviour
 
     public void LostGame()
     {
+        SoundManager.Instance.PlayLostSound();
         deadMenu.SetActive(true);
         Time.timeScale = 0.01f;
+    }
+
+    public void WonGame()
+    {
+        SoundManager.Instance.PlayWonSound();
+        wonMenu.SetActive(true);
     }
 
     public void OpenShop()
@@ -76,6 +100,7 @@ public class HUD : MonoBehaviour
     public void Retry()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Time.timeScale = 1;
         SceneManager.LoadScene(currentSceneIndex);
     }
 }

@@ -5,16 +5,23 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - World
+  - Tower
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PostProcessing
   - Water
   - UI
   - Road
+<<<<<<< Updated upstream
   - 
   - 
+=======
+  - Ground
+  - Tower
+>>>>>>> Stashed changes
   - 
   - 
   - 
@@ -53,4 +60,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 2816761251
+    locked: 0
+  - name: Castle
+    uniqueID: 2838201821
     locked: 0

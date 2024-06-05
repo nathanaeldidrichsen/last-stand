@@ -26,13 +26,14 @@ public class Castle : MonoBehaviour
             if (enemy != null)
             {
                 TakeDamage(enemy.damage);
-                Destroy(other.gameObject);
+                other.GetComponent<Enemy>().Die();
             }
         }
     }
 
     public void TakeDamage(int damage)
     {
+        SoundManager.Instance.PlayCastleSound();
         currentHealth -= damage;
         UpdateHealthUI();
 
