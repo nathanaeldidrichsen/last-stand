@@ -1500,6 +1500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b07d947d69244b43a80b14d362733ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStats: {fileID: 11400000, guid: 5756f9f327261a443a423dae03c5e366, type: 2}
   whichScene: Worldmap
 --- !u!328 &1285968904
 VideoPlayer:
