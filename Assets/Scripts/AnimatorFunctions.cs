@@ -8,15 +8,15 @@ animation events in the animation window.*/
 
 public class AnimatorFunctions : MonoBehaviour
 {
-    // [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
     // [SerializeField] private ParticleSystem particleSystem;
     // [SerializeField] private Animator setBoolInAnimator;
 
-    // // If we don't specify what audio source to play sounds through, just use the one on player.
-    // void Start()
-    // {
-    //     if (!audioSource) audioSource = NewPlayer.Instance.audioSource;
-    // }
+    // If we don't specify what audio source to play sounds through, just use the one on player.
+    void Start()
+    {
+        if (!audioSource) audioSource = GetComponent<AudioSource>();
+    }
 
     // //Hide and unhide the player
     // public void HidePlayer(bool hide)
@@ -41,11 +41,12 @@ public class AnimatorFunctions : MonoBehaviour
     //     NewPlayer.Instance.Freeze(false);
     // }
 
+
     // //Play a sound through the specified audioSource
-    // void PlaySound(AudioClip whichSound)
-    // {
-    //     audioSource.PlayOneShot(whichSound);
-    // }
+    void PlaySound(AudioClip whichSound)
+    {
+        audioSource.PlayOneShot(whichSound);
+    }
 
     // public void EmitParticles(int amount)
     // {

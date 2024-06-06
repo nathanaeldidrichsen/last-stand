@@ -15,7 +15,7 @@ TextureImporter:
       213: -1682882690250861636
     second: Castle_3
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -36,6 +36,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -45,8 +46,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -74,6 +75,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -123,6 +125,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -151,9 +165,9 @@ TextureImporter:
       name: Castle_1
       rect:
         serializedVersion: 2
-        x: 90
-        y: 81
-        width: 60
+        x: 264
+        y: 79
+        width: 50
         height: 93
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -172,10 +186,10 @@ TextureImporter:
       name: Castle_2
       rect:
         serializedVersion: 2
-        x: 172
-        y: 121
-        width: 12
-        height: 14
+        x: 16
+        y: 15
+        width: 79
+        height: 90
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +207,10 @@ TextureImporter:
       name: Castle_3
       rect:
         serializedVersion: 2
-        x: 198
-        y: 77
-        width: 60
-        height: 93
+        x: 156
+        y: 56
+        width: 12
+        height: 14
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,6 +220,27 @@ TextureImporter:
       bones: []
       spriteID: cb391f80c1335a8e0800000000000000
       internalID: -1682882690250861636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 60
+        height: 92
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea65af976e9f664dbead10f495cc80a
+      internalID: 1521951064
       vertices: []
       indices: 
       edges: []
@@ -220,6 +255,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Castle_0: -6754239384357436178
+      Castle_1: 6906767639317418099
+      Castle_2: 7803579835838553921
+      Castle_3: -1682882690250861636
+      Castle_4: 1521951064
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

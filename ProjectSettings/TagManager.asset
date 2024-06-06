@@ -11,17 +11,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - PostProcessing
+  - Ground
   - Water
   - UI
   - Road
-<<<<<<< Updated upstream
-  - 
-  - 
-=======
-  - Ground
   - Tower
->>>>>>> Stashed changes
+  - 
   - 
   - 
   - 
@@ -46,21 +41,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Water
-    uniqueID: 2774932373
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 211963315
+    locked: 0
+  - name: Tower
+    uniqueID: 2838790533
+    locked: 0
   - name: Enemies
-    uniqueID: 425065673
-    locked: 0
-  - name: Towers
-    uniqueID: 3741127715
-    locked: 0
-  - name: UI
-    uniqueID: 2816761251
-    locked: 0
-  - name: Castle
-    uniqueID: 2838201821
+    uniqueID: 2829311109
     locked: 0

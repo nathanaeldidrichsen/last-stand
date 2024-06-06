@@ -80,7 +80,36 @@ public class HUD : MonoBehaviour
     public void WonGame()
     {
         SoundManager.Instance.PlayWonSound();
+        if (GameManager.Instance.currentLevel == 1)
+        {
+            GameManager.Instance.gameStats.hasCompletedLevel1 = true;
+        }
+        else if (GameManager.Instance.currentLevel == 2)
+        {
+            GameManager.Instance.gameStats.hasCompletedLevel2 = true;
+        }
+        else if (GameManager.Instance.currentLevel == 3)
+        {
+            GameManager.Instance.gameStats.hasCompletedLevel3 = true;
+        }
+        else if (GameManager.Instance.currentLevel == 4)
+        {
+            GameManager.Instance.gameStats.hasCompletedLevel4 = true;
+        }
+        else
+        {
+            GameManager.Instance.gameStats.hasCompletedLevel5 = true;
+
+        }
+
+            GameManager.Instance.gameStats.worldCoins += 40;
+
         wonMenu.SetActive(true);
+    }
+
+    public void OpenWorldMap()
+    {
+        SceneManager.LoadScene("Worldmap");
     }
 
     public void OpenShop()

@@ -4,7 +4,9 @@ public class GameManager : MonoBehaviour
 {
     // Static instance of GameManager which allows it to be accessed by any other script
     public int coins;
+    public GameStats gameStats;
     [HideInInspector] public AudioSource audioSource; //A primary audioSource a large portion of game sounds are passed through
+    public int currentLevel = 1;
     private static GameManager instance;
 
     // Public property to access the instance
@@ -29,6 +31,30 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+    }
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.U))
+        {
+            KillAllEnemies();
+
+        }
+    }
+
+
+    public void KillAllEnemies()
+    {
+        {
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+            foreach (GameObject enemy in enemies)
+            {
+                Enemy myEnemy = enemy.GetComponent<Enemy>();
+                myEnemy.Die();
+                // Destroy(enemy);
+            }
+        }
     }
 
     // Awake is called when the script instance is being loaded

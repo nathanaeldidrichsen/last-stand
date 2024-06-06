@@ -12,7 +12,7 @@ public class WavesManager : MonoBehaviour
     [SerializeField] private int activeEnemies = 0; // Counter to track active enemies
 
     private static WavesManager instance;
-    
+
     // Public property to access the instance
     public static WavesManager Instance
     {
@@ -70,12 +70,8 @@ public class WavesManager : MonoBehaviour
             currentWaveIndex++;
             HUD.Instance.waveText.text = (currentWaveIndex).ToString();
         }
-        else
-        {
-            Debug.Log("All waves completed!");
-            HUD.Instance.WonGame();
-        }
     }
+
 
     // Method to notify that an enemy has died
     public void OnEnemyDeath()
@@ -84,6 +80,12 @@ public class WavesManager : MonoBehaviour
         if (activeEnemies <= 0 && !isSpawning)
         {
             StartCoroutine(WaitAndStartNextWave());
+        }
+
+        if (currentWaveIndex >= waves.Length && activeEnemies <= 0)
+        {
+            Debug.Log("All waves completed!");
+            HUD.Instance.WonGame();
         }
     }
 

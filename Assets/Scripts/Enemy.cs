@@ -12,15 +12,11 @@ public class Enemy : MonoBehaviour
     public int coinsToDrop;
     public bool hasRandomCoinDropAmount = false;
     public int damage = 1;
-<<<<<<< Updated upstream
-    private SpriteRenderer spriteRenderer;
-=======
     private int currentHealth;
     private SpriteRenderer sprite;
     private Animator anim;
 
     public Slider healthSlider;
->>>>>>> Stashed changes
 
     // List of waypoints to move through
     public List<Transform> waypoints;
@@ -53,10 +49,6 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-<<<<<<< Updated upstream
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        speed = Random.Range(speed - speedDeviation, speed);
-=======
 
         recoveryCounter = GetComponent<RecoveryCounter>();
         if(hasRandomCoinDropAmount)
@@ -70,7 +62,6 @@ public class Enemy : MonoBehaviour
         healthSlider.maxValue = health;
         UpdateHealthUI();
 
->>>>>>> Stashed changes
 
         // Ensure there are waypoints in the list
         if (waypoints.Count == 0)
@@ -135,23 +126,13 @@ public class Enemy : MonoBehaviour
         // Flip the localScale.x based on the direction of movement
         if (direction.x > 0)
         {
-<<<<<<< Updated upstream
-            /*transform.localScale = new Vector3(-Mathf.Abs(initialLocalScale.x), initialLocalScale.y, initialLocalScale.z);*/
-            spriteRenderer.flipX = true;
-        }
-        else if (direction.x < 0)
-        {
-            spriteRenderer.flipX = false;
-            /*transform.localScale = new Vector3(Mathf.Abs(initialLocalScale.x), initialLocalScale.y, initialLocalScale.z);*/
-=======
             sprite.flipX = true;
             // transform.localScale = new Vector3(-Mathf.Abs(initialLocalScale.x), initialLocalScale.y, initialLocalScale.z);
         }
         else if (direction.x < 0)
         {
             sprite.flipX = false;
-            transform.localScale = new Vector3(Mathf.Abs(initialLocalScale.x), initialLocalScale.y, initialLocalScale.z);
->>>>>>> Stashed changes
+            // transform.localScale = new Vector3(Mathf.Abs(initialLocalScale.x), initialLocalScale.y, initialLocalScale.z);
         }
     }
 
