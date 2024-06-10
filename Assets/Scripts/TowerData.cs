@@ -7,6 +7,7 @@ using UnityEngine;
 public class TowerData : ScriptableObject
 {
     public GameObject bullet; // Projectile prefab
+    public AnimatorOverrideController animatorOverrideController;
     public int damage = 10; // Damage dealt by the tower
     public int purchasePrice = 10;
     public int sellPrice = 5;

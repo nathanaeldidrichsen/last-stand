@@ -23,8 +23,7 @@ public class Tower : MonoBehaviour
     public TMPro.TextMeshProUGUI infoText;
     public GameObject towerMenu; // The menu that appears when a tower is clicked
     public GameObject shootRangeObject;
-
-    
+    [SerializeField] private Animator anim;
 
 
 
@@ -32,12 +31,24 @@ public class Tower : MonoBehaviour
 
     private float fireCooldown; // Cooldown timer for shooting
 
+    void Awake()
+    {
+        
+        anim = GetComponent<Animator>();
+    }
+
     void Start()
     {
         towerData = upgradeList[0];
         spriteRenderer = GetComponent<SpriteRenderer>();
         SetTowerStats();
         fireCooldown = 0f;
+
+
+        if (towerData.animatorOverrideController != null)
+        {
+            anim.runtimeAnimatorController = towerData.animatorOverrideController;
+        }
     }
 
     void Update()
@@ -57,6 +68,11 @@ public class Tower : MonoBehaviour
 
     void Shoot(Vector3 targetPosition)
     {
+        if (anim != null)
+        {
+            anim.Play("Shoot");
+        }
+
         SoundManager.Instance.PlayShootSound();
         // Instantiate the bullet
         GameObject spawnedBullet = Instantiate(bullet, firePoint.position, Quaternion.identity);
@@ -103,7 +119,7 @@ public class Tower : MonoBehaviour
         return nearestEnemy;
     }
 
-        public void ShowMenu()
+    public void ShowMenu()
     {
         if (towerMenu.activeSelf)
         {
@@ -118,7 +134,7 @@ public class Tower : MonoBehaviour
 
     public void ShowTowerStats()
     {
-            SetTowerInfoText("Damage: " + towerData.damage + "\n" + "APS: " + towerData.timeBetweenFire + "\n" + "Range: " + towerData.shootRange + "\n");
+        SetTowerInfoText("Damage: " + towerData.damage + "\n" + "APS: " + towerData.timeBetweenFire + "\n" + "Range: " + towerData.shootRange + "\n");
     }
 
     public void SellTower()
@@ -140,10 +156,15 @@ public class Tower : MonoBehaviour
         slowdownDuration = towerData.slowDownDuration;
         slowdownSpeedAmount = towerData.slowDownSpeedAmount;
         shootRange = towerData.shootRange;
-    if (shootRangeObject != null)
-    {
-        shootRangeObject.transform.localScale = new Vector2(shootRange *2, shootRange*2);
-    }
+        if (shootRangeObject != null)
+        {
+            shootRangeObject.transform.localScale = new Vector2(shootRange * 2, shootRange * 2);
+        }
+
+        if (towerData.animatorOverrideController != null)
+        {
+            anim.runtimeAnimatorController = towerData.animatorOverrideController;
+        }
     }
 
     public void UpgradeTower()
@@ -162,12 +183,12 @@ public class Tower : MonoBehaviour
         }
     }
 
-        // Method to display the shoot range in the game view
-public void DisplayShootRange()
-{
-    // Toggle the active state of shootRangeObject
-    shootRangeObject.SetActive(!shootRangeObject.activeSelf);
-}
+    // Method to display the shoot range in the game view
+    public void DisplayShootRange()
+    {
+        // Toggle the active state of shootRangeObject
+        shootRangeObject.SetActive(!shootRangeObject.activeSelf);
+    }
     public void SellTowerInfo()
     {
         infoText.text = "Sell tower for " + towerData.sellPrice + " coins";
@@ -177,11 +198,11 @@ public void DisplayShootRange()
     {
         if (currentTier >= upgradeList.Length - 1)
         {
-        infoText.text = "Tower is fully upgraded";
+            infoText.text = "Tower is fully upgraded";
         }
         else if (upgradeList[currentTier].upgradePrice > GameManager.Instance.coins)
         {
-        infoText.text = "Cost " + towerData.upgradePrice + "\n" + "Insufficient coins";
+            infoText.text = "Cost " + towerData.upgradePrice + "\n" + "Insufficient coins";
 
         }
         else

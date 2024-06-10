@@ -13,21 +13,13 @@ MonoBehaviour:
   m_Name: Wave3 1
   m_EditorClassIdentifier: 
   enemiesToSpawn:
-  - {fileID: 7685795642027342074, guid: 8acc8b8b6c7f5ff4fa4da091f1d2ed21, type: 3}
-  - {fileID: 7685795642027342074, guid: 8acc8b8b6c7f5ff4fa4da091f1d2ed21, type: 3}
-  - {fileID: 7685795642027342074, guid: 8acc8b8b6c7f5ff4fa4da091f1d2ed21, type: 3}
-  - {fileID: 7685795642027342074, guid: 8acc8b8b6c7f5ff4fa4da091f1d2ed21, type: 3}
-  - {fileID: 7685795642027342074, guid: 8acc8b8b6c7f5ff4fa4da091f1d2ed21, type: 3}
-  - {fileID: 7685795642027342074, guid: 8acc8b8b6c7f5ff4fa4da091f1d2ed21, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
-  - {fileID: 4180584654505924858, guid: 13eb0001654bd894eb3ea5ef2998c97a, type: 3}
+  - {fileID: 2162587264991389382, guid: 56a12de29bcdb6242bee3cd33a0aca3a, type: 3}
+  - {fileID: 2162587264991389382, guid: 56a12de29bcdb6242bee3cd33a0aca3a, type: 3}
+  - {fileID: 2162587264991389382, guid: 56a12de29bcdb6242bee3cd33a0aca3a, type: 3}
+  - {fileID: 2162587264991389382, guid: 56a12de29bcdb6242bee3cd33a0aca3a, type: 3}
+  - {fileID: 2162587264991389382, guid: 56a12de29bcdb6242bee3cd33a0aca3a, type: 3}
+  - {fileID: 2162587264991389382, guid: 56a12de29bcdb6242bee3cd33a0aca3a, type: 3}
+  - {fileID: 2162587264991389382, guid: 56a12de29bcdb6242bee3cd33a0aca3a, type: 3}
+  - {fileID: 2162587264991389382, guid: 56a12de29bcdb6242bee3cd33a0aca3a, type: 3}
+  - {fileID: 2162587264991389382, guid: 56a12de29bcdb6242bee3cd33a0aca3a, type: 3}
+  - {fileID: 2162587264991389382, guid: 56a12de29bcdb6242bee3cd33a0aca3a, type: 3}
