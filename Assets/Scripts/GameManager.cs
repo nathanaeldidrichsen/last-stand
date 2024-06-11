@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public AudioSource audioSource; //A primary audioSource a large portion of game sounds are passed through
     public int currentLevel = 1;
     private static GameManager instance;
+    private bool isPaused = false;
+    public GameObject pausedText;
+
 
     // Public property to access the instance
     public static GameManager Instance
@@ -35,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        pausedText.SetActive(isPaused);
         if (Input.GetKey(KeyCode.U))
         {
             KillAllEnemies();
@@ -83,6 +87,22 @@ public class GameManager : MonoBehaviour
         {
             HUD.Instance.speedBtnText.text = "SPEED x1";
             Time.timeScale = 1;
+        }
+    }
+
+        public void PauseGame()
+    {
+        if (isPaused)
+        {
+            // If the game is currently paused, resume the game
+            Time.timeScale = 1;
+            isPaused = false;
+        }
+        else
+        {
+            // If the game is not paused, pause the game
+            Time.timeScale = 0;
+            isPaused = true;
         }
     }
 
