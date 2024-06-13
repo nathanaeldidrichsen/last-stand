@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 270601367629545183, guid: b7826822f00d7484da30ac75d896d3c5, type: 3}
   animatorOverrideController: {fileID: 22100000, guid: 90e088272f08b0347918991f026a97e6, type: 2}
-  damage: 2
+  damage: 8
   purchasePrice: 50
   sellPrice: 35
   shootRange: 0.8
   upgradePrice: 25
   shootSpeed: 4
-  timeBetweenFire: 0.8
+  timeBetweenFire: 2
   description: Does extra damage to grass types
   fireDamage: 1
   coldDamge: 0
@@ -28,5 +28,5 @@ MonoBehaviour:
   towerName: Fire tower
   slowDownDuration: 0
   slowDownSpeedAmount: 0
-  towerSprite: {fileID: 5763957444687467325, guid: cba33f2fa7526104696a11420f7e19a9, type: 3}
+  towerSprite: {fileID: 975489051, guid: ee2b19561c17e474ebf52f8f1315c4fa, type: 3}
   elementType: 0

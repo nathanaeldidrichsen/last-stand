@@ -23,7 +23,7 @@ public class HUD : MonoBehaviour
     public GameObject wonMenu;
 
     public GameObject shopMenu;
-    private bool isShopOpen;
+    [HideInInspector] public bool isShopOpen;
     [HideInInspector] public Animator anim;
 
     private static HUD instance;
@@ -117,12 +117,13 @@ public class HUD : MonoBehaviour
         if (!isShopOpen)
         {
             isShopOpen = true;
-            shopMenu.SetActive(true);
+            anim.SetTrigger("open");
         }
         else
         {
+            anim.SetTrigger("close");
             isShopOpen = false;
-            shopMenu.SetActive(false);
+            // shopMenu.SetActive(false);
         }
     }
 

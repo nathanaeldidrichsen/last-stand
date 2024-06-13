@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Cannon tier 2
   m_EditorClassIdentifier: 
   bullet: {fileID: 270601367629545183, guid: 2808354d3f481f743a0c55a8ae84a4f6, type: 3}
-  damage: 6
+  animatorOverrideController: {fileID: 0}
+  damage: 70
   purchasePrice: 40
   sellPrice: 45
   shootRange: 0.8
   upgradePrice: 30
   shootSpeed: 4
-  timeBetweenFire: 1
+  timeBetweenFire: 3
   description: short range but high damage
   fireDamage: 0
   coldDamge: 0
@@ -27,5 +28,5 @@ MonoBehaviour:
   towerName: Cannon tower
   slowDownDuration: 0
   slowDownSpeedAmount: 0
-  towerSprite: {fileID: 1504489089, guid: ee2b19561c17e474ebf52f8f1315c4fa, type: 3}
+  towerSprite: {fileID: -328793227, guid: ee2b19561c17e474ebf52f8f1315c4fa, type: 3}
   elementType: 4

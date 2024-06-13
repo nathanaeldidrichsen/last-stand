@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Archer Tower
   m_EditorClassIdentifier: 
   bullet: {fileID: 270601367629545183, guid: 3c55d24aaee8a754da4891cf870a25a8, type: 3}
-  damage: 1
+  animatorOverrideController: {fileID: 0}
+  damage: 3
   purchasePrice: 20
   sellPrice: 10
   shootRange: 0.8
   upgradePrice: 10
   shootSpeed: 3
-  timeBetweenFire: 0.8
+  timeBetweenFire: 1
   description: Has longe range but low damage
   fireDamage: 0
   coldDamge: 0

@@ -31,6 +31,9 @@ public class SoundManager : MonoBehaviour
                 public AudioClip lostSound;
     public float lostVol = 0.3f;
 
+                    public AudioClip worldMapUpgradeTowerSound;
+    public float worldMapUpgradeTowerVol = 0.3f;
+
 
 
 
@@ -66,6 +69,10 @@ public class SoundManager : MonoBehaviour
         audioSource.PlayOneShot(upgradeTowerSound, upgradeTowerVol);
     }
 
+    public void PlayWorldMapUpgradeTower()
+    {
+        audioSource.PlayOneShot(worldMapUpgradeTowerSound, worldMapUpgradeTowerVol);
+    }
         public void PlayCastleSound()
     {
         audioSource.PlayOneShot(castleSound, castleVol);

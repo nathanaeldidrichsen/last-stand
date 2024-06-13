@@ -29,11 +29,11 @@ public class MenuHandler : MonoBehaviour
         gameStats.hasCompletedLevel3 = false;
         gameStats.hasCompletedLevel4 = false;
         gameStats.hasCompletedLevel5 = false;
-        gameStats.archerTowerTier = 2;
-        gameStats.cannonTowerTier = 2;
-        gameStats.fireTowerTier = 2;
-        gameStats.blessedTowerTier = 2;
-        gameStats.magicTowerTier = 2;
-        gameStats.frostTowerTier = 2;
+        gameStats.archerTier = 1;
+        gameStats.cannonTier = 1;
+        gameStats.fireTier = 1;
+        gameStats.blessedTier = 1;
+        gameStats.magicTier = 1;
+        gameStats.frostTier = 1;
     }
 }

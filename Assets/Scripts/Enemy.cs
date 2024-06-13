@@ -7,11 +7,14 @@ using UnityEngine.UI;
 public class Enemy : MonoBehaviour
 {
     // Public variables for speed, health, and slowdown factor
-    public float speed = 2f;
-    public int health = 3;
-    public int coinsToDrop;
-    public bool hasRandomCoinDropAmount = false;
-    public int damage = 1;
+    public EnemyStats stats;
+    [HideInInspector] public float speed = 2f;
+    [HideInInspector] public string enemyName;
+    [HideInInspector] public int health = 3;
+    [HideInInspector] public int coinsToDrop;
+    [HideInInspector] public string lore;
+    [HideInInspector] public bool hasRandomCoinDropAmount = false;
+    [HideInInspector] public int damage = 1;
     private int currentHealth;
     private SpriteRenderer sprite;
     private Animator anim;
@@ -49,8 +52,9 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         recoveryCounter = GetComponent<RecoveryCounter>();
+        //Set the stats from the scriptable object enemyStats
+        SetStats();
         if(hasRandomCoinDropAmount)
         {
             coinsToDrop = Random.Range(1, coinsToDrop); 
@@ -136,6 +140,20 @@ public class Enemy : MonoBehaviour
         }
     }
 
+
+    public void SetStats()
+    {
+    speed = stats.speed;
+    lore = stats.lore;
+    health = stats.health;
+    coinsToDrop = stats.coinsToDrop;
+    hasRandomCoinDropAmount = stats.hasRandomCoinDropAmount;
+    damage = stats.damage;
+    enemyName = stats.enemyName;
+    elementType = (ElementType)stats.elementType;
+    recoveryCounter.recoveryTime = stats.recoveryTime;
+    }
+
     // Function to deal damage to the enemy
     public void TakeDamage(int damage)
     {
@@ -175,7 +193,7 @@ public class Enemy : MonoBehaviour
     {
         if(slowdownSpeedAmount > 0)
         {
-        speed = 0.1f;
+        speed = 0.05f;
         recoveryCounter.Recover();
         }
         // if (!recoveryCounter.recovering)

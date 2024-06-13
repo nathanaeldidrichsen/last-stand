@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Blessed Tower
   m_EditorClassIdentifier: 
   bullet: {fileID: 270601367629545183, guid: d09c7f3438165b047970f9c3f816bb56, type: 3}
-  damage: 3
+  animatorOverrideController: {fileID: 0}
+  damage: 8
   purchasePrice: 50
   sellPrice: 25
   shootRange: 0.8
   upgradePrice: 25
   shootSpeed: 4
-  timeBetweenFire: 0.8
-  description: Scorches grass type enemies
+  timeBetweenFire: 2
+  description: Smites enemies of darkness
   fireDamage: 0
   coldDamge: 0
   lightDamge: 0

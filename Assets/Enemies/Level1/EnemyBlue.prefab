@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 6564611931220556086}
   - component: {fileID: 2166905722779121304}
   - component: {fileID: 4575575381428427062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Logic
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -477,9 +477,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e24415ec4c9cf941a12784b687a0580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: a804851c9e4bac14794e85ec30bb694b, type: 2}
   speed: 0.2
+  enemyName: 
   health: 3
   coinsToDrop: 1
+  lore: 
   hasRandomCoinDropAmount: 0
   damage: 1
   healthSlider: {fileID: 511895394890124055}

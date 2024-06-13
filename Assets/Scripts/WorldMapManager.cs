@@ -1,3 +1,4 @@
+using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -48,14 +49,15 @@ public class WorldMapManager : MonoBehaviour
 
     void Awake()
     {
+        Time.timeScale = 1;
         towerTierUpgrades = new Dictionary<string, System.Action>
         {
-            { "archer", () => gameStats.archerTowerTier++ },
-            { "cannon", () => gameStats.cannonTowerTier++ },
-            { "frost", () => gameStats.frostTowerTier++ },
-            { "blessed", () => gameStats.blessedTowerTier++ },
-            { "magic", () => gameStats.magicTowerTier++ },
-            { "fire", () => gameStats.fireTowerTier++ }
+            { "archer", () => gameStats.archerTier++ },
+            { "cannon", () => gameStats.cannonTier++ },
+            { "frost", () => gameStats.frostTier++ },
+            { "blessed", () => gameStats.blessedTier++ },
+            { "magic", () => gameStats.magicTier++ },
+            { "fire", () => gameStats.fireTier++ }
         };
     }
     void Start()

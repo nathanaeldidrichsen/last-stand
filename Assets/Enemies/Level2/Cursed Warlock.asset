@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5233b825e0c97364f8a2e80f76df2f45, type: 3}
+  m_Name: Cursed Warlock
+  m_EditorClassIdentifier: 
+  enemyName: Cursed Warlock
+  speed: 0.25
+  health: 700
+  coinsToDrop: 70
+  hasRandomCoinDropAmount: 0
+  damage: 1
+  recoveryTime: 2
+  lore: Twisted sorcerers who traded their souls for dark powers, now bound to serve
+    the wasteland's evil.
+  elementType: 7

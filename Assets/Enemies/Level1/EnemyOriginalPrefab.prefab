@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 7701228555038895916}
   - component: {fileID: 6564611931220556086}
   - component: {fileID: 2166905722779121304}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Logic
   m_TagString: Enemy
   m_Icon: {fileID: 0}

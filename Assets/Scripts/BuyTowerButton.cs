@@ -97,7 +97,12 @@ public class BuyTowerButton : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     // Called when dragging the pointer
     public void OnDrag(PointerEventData eventData)
     {
-        HUD.Instance.anim.SetBool("isDragging", true);
+
+        if(HUD.Instance.isShopOpen)
+        {
+            HUD.Instance.OpenShop();
+        }
+
         if (placementIndicator != null)
         {
             // Update placement indicator position to follow the mouse position

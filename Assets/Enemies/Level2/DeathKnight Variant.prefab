@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2615194585402496016, guid: 97fb80af6eb4c9a40bf566ab0d70ece0, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: 31f3016b916a3554c8de6f4ac1754f4a, type: 2}
+    - target: {fileID: 2615194585402496016, guid: 97fb80af6eb4c9a40bf566ab0d70ece0, type: 3}
       propertyPath: health
       value: 200
       objectReference: {fileID: 0}
@@ -63,6 +67,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6050051959156618430, guid: a729b39af2abd624291650d654e5ad83, type: 3}
+    - target: {fileID: 5716259405566910671, guid: 97fb80af6eb4c9a40bf566ab0d70ece0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.4371
+      objectReference: {fileID: 0}
+    - target: {fileID: 5716259405566910671, guid: 97fb80af6eb4c9a40bf566ab0d70ece0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5826411011822223549, guid: 97fb80af6eb4c9a40bf566ab0d70ece0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

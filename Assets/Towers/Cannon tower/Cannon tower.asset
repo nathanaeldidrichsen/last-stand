@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Cannon tower
   m_EditorClassIdentifier: 
   bullet: {fileID: 270601367629545183, guid: 2808354d3f481f743a0c55a8ae84a4f6, type: 3}
-  damage: 4
+  animatorOverrideController: {fileID: 0}
+  damage: 5
   purchasePrice: 30
   sellPrice: 20
   shootRange: 0.6
   upgradePrice: 20
   shootSpeed: 4
-  timeBetweenFire: 1
-  description: Is strong against armored enemies
+  timeBetweenFire: 3
+  description: Is strong against heavy armored enemies
   fireDamage: 0
   coldDamge: 0
   lightDamge: 0

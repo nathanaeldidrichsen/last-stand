@@ -64,6 +64,10 @@ PrefabInstance:
       value: EnemySkeleton
       objectReference: {fileID: 0}
     - target: {fileID: 7701228555038895916, guid: 952007c58b784f545b5b4c6c70fdfe51, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: 606d8a0580345264ebd0a2db2bde18df, type: 2}
+    - target: {fileID: 7701228555038895916, guid: 952007c58b784f545b5b4c6c70fdfe51, type: 3}
       propertyPath: damage
       value: 1
       objectReference: {fileID: 0}

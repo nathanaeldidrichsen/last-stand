@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Frost tower
   m_EditorClassIdentifier: 
   bullet: {fileID: 270601367629545183, guid: eb6e63e4231d7ea4fb63c98c848e350b, type: 3}
-  damage: 10
+  animatorOverrideController: {fileID: 0}
+  damage: 7
   purchasePrice: 50
   sellPrice: 25
   shootRange: 0.6
@@ -25,7 +26,7 @@ MonoBehaviour:
   coldDamge: 3
   lightDamge: 0
   towerName: Frost tower
-  slowDownDuration: 2
+  slowDownDuration: 3
   slowDownSpeedAmount: 0.3
   towerSprite: {fileID: 975833568, guid: ee2b19561c17e474ebf52f8f1315c4fa, type: 3}
   elementType: 1

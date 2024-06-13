@@ -13,12 +13,12 @@ public bool hasCompletedLevel2;
 public bool hasCompletedLevel3;
 public bool hasCompletedLevel4;
 public bool hasCompletedLevel5;
-public int archerTowerTier = 2;
-public int cannonTowerTier = 2;
-public int fireTowerTier = 2;
-public int blessedTowerTier = 2;
-public int magicTowerTier = 2;
-public int frostTowerTier = 2;
+public int archerTier = 2;
+public int cannonTier = 2;
+public int fireTier = 2;
+public int blessedTier = 2;
+public int magicTier = 2;
+public int frostTier = 2;
 public int tierUpgradePrice = 30;
 
 }

@@ -18,11 +18,11 @@ public class WorldMapShop : MonoBehaviour
 
     void Update()
     {
-                archerTier.text = WorldMapManager.Instance.gameStats.archerTowerTier.ToString();
-        cannonTier.text = WorldMapManager.Instance.gameStats.cannonTowerTier.ToString();
-        frostTier.text = WorldMapManager.Instance.gameStats.frostTowerTier.ToString();
-        fireTier.text = WorldMapManager.Instance.gameStats.fireTowerTier.ToString();
-        magicTier.text = WorldMapManager.Instance.gameStats.magicTowerTier.ToString();
-        blessedTier.text = WorldMapManager.Instance.gameStats.blessedTowerTier.ToString();
+                archerTier.text = WorldMapManager.Instance.gameStats.archerTier.ToString();
+        cannonTier.text = WorldMapManager.Instance.gameStats.cannonTier.ToString();
+        frostTier.text = WorldMapManager.Instance.gameStats.frostTier.ToString();
+        fireTier.text = WorldMapManager.Instance.gameStats.fireTier.ToString();
+        magicTier.text = WorldMapManager.Instance.gameStats.magicTier.ToString();
+        blessedTier.text = WorldMapManager.Instance.gameStats.blessedTier.ToString();
     }
 }

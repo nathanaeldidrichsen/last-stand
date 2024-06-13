@@ -15,6 +15,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4293381970071201521, guid: a729b39af2abd624291650d654e5ad83, type: 3}
+    - target: {fileID: 4164330164079569445, guid: aaf7de2a25d8a1943be9bacf3b9964a0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.4246
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968850613999886074, guid: aaf7de2a25d8a1943be9bacf3b9964a0, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: cc99c4ce919cf1d4d8736ec09f2bf59e, type: 2}
     - target: {fileID: 5968850613999886074, guid: aaf7de2a25d8a1943be9bacf3b9964a0, type: 3}
       propertyPath: health
       value: 70

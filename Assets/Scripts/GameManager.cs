@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -78,7 +79,7 @@ public class GameManager : MonoBehaviour
 
     public void SpeedUpGame()
     {
-        if(Time.timeScale == 1)
+        if (Time.timeScale == 1)
         {
             Time.timeScale = 2;
             HUD.Instance.speedBtnText.text = "SPEED x2";
@@ -90,7 +91,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-        public void PauseGame()
+    public void LoadscenNme(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+    public void PauseGame()
     {
         if (isPaused)
         {
@@ -122,5 +127,5 @@ public class GameManager : MonoBehaviour
         coins -= coinAmount;
     }
 
-    
+
 }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 270601367629545183, guid: 19d532e22f053854daf685a4991b0fe1, type: 3}
   animatorOverrideController: {fileID: 22100000, guid: ff72bef6acfc0984fb4376488fb1369c, type: 2}
-  damage: 2
+  damage: 5
   purchasePrice: 5
   sellPrice: 25
   shootRange: 1

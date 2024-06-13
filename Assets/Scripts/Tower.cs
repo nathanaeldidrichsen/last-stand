@@ -169,16 +169,26 @@ public class Tower : MonoBehaviour
 
     public void UpgradeTower()
     {
-        // ShowMenu();
-        if (currentTier < upgradeList.Length + 1)
+        // Only allow upgrade if the current tier is not the maximum tier
+        if (currentTier < upgradeList.Length - 1)
         {
-            if (upgradeList[currentTier].upgradePrice < GameManager.Instance.coins)
+            // Check if the upgrade price is affordable
+            if (upgradeList[currentTier].upgradePrice <= GameManager.Instance.coins)
             {
-                SoundManager.Instance.PlayBuildTowerSound();
-                GameManager.Instance.SpendCoins(towerData.upgradePrice);
-                currentTier++;
-                towerData = upgradeList[currentTier];
-                SetTowerStats();
+                // Check if the tower's tier matches the maximum tier specified in gameStats
+                if ((towerData.elementType == TowerData.ElementType.Fire && currentTier <= GameManager.Instance.gameStats.fireTier -1) ||
+                    (towerData.elementType == TowerData.ElementType.Ice && currentTier <= GameManager.Instance.gameStats.frostTier -1) ||
+                    (towerData.elementType == TowerData.ElementType.Normal && currentTier <= GameManager.Instance.gameStats.archerTier -1) ||
+                    (towerData.elementType == TowerData.ElementType.Heavy && currentTier <= GameManager.Instance.gameStats.cannonTier-1) ||
+                    (towerData.elementType == TowerData.ElementType.Magic && currentTier <= GameManager.Instance.gameStats.magicTier-1) ||
+                    (towerData.elementType == TowerData.ElementType.Light && currentTier <= GameManager.Instance.gameStats.blessedTier-1))
+                {
+                    SoundManager.Instance.PlayBuildTowerSound();
+                    GameManager.Instance.SpendCoins(towerData.upgradePrice);
+                    currentTier++;
+                    towerData = upgradeList[currentTier];
+                    SetTowerStats();
+                }
             }
         }
     }
@@ -200,6 +210,7 @@ public class Tower : MonoBehaviour
         {
             infoText.text = "Tower is fully upgraded";
         }
+        
         else if (upgradeList[currentTier].upgradePrice > GameManager.Instance.coins)
         {
             infoText.text = "Cost " + towerData.upgradePrice + "\n" + "Insufficient coins";

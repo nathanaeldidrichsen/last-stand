@@ -64,6 +64,10 @@ PrefabInstance:
       value: EnemyZombie Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7701228555038895916, guid: 952007c58b784f545b5b4c6c70fdfe51, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: a830d0d55805f5145b396c911b2bdb0a, type: 2}
+    - target: {fileID: 7701228555038895916, guid: 952007c58b784f545b5b4c6c70fdfe51, type: 3}
       propertyPath: damage
       value: 1
       objectReference: {fileID: 0}

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Magic tower
   m_EditorClassIdentifier: 
   bullet: {fileID: 270601367629545183, guid: e154ee49a19a54a41ad65a7487a23f56, type: 3}
+  animatorOverrideController: {fileID: 0}
   damage: 5
   purchasePrice: 50
   sellPrice: 25

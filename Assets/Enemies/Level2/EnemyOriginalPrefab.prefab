@@ -203,7 +203,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: -1465656187
-  m_SortingOrder: 0
+  m_SortingOrder: 233
   m_TargetDisplay: 0
 --- !u!114 &6115593123901538425
 MonoBehaviour:
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 1563141367456186890}
   - component: {fileID: 5816731288287202724}
   - component: {fileID: 5816731288287202727}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Logic
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -306,9 +306,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e24415ec4c9cf941a12784b687a0580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: 31f3016b916a3554c8de6f4ac1754f4a, type: 2}
   speed: 0.2
+  enemyName: 
   health: 1
   coinsToDrop: 1
+  lore: 
   hasRandomCoinDropAmount: 0
   damage: 1
   healthSlider: {fileID: 5310259810851450923}

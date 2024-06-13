@@ -400,6 +400,7 @@ MonoBehaviour:
   upgradeList:
   - {fileID: 11400000, guid: 80a72e1a9d1c3f442b819417ae5e6f43, type: 2}
   - {fileID: 11400000, guid: d437458335cb6db40ba655e014d491bf, type: 2}
+  - {fileID: 11400000, guid: 1bdc5481d3591a74dad9b6f2cc04b2b6, type: 2}
   bullet: {fileID: 270601367629545183, guid: 2808354d3f481f743a0c55a8ae84a4f6, type: 3}
   shootRange: 0.5
   shootSpeed: 3
@@ -410,6 +411,7 @@ MonoBehaviour:
   infoText: {fileID: 7241376070822802942}
   towerMenu: {fileID: 7241376071400692336}
   shootRangeObject: {fileID: 913669817652205630}
+  anim: {fileID: 0}
   firePoint: {fileID: 3519535741262492585}
 --- !u!61 &3111877225345573814
 BoxCollider2D:

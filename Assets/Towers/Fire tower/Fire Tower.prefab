@@ -255,7 +255,7 @@ SpriteRenderer:
   m_SortingLayerID: -1456176763
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5763957444687467325, guid: cba33f2fa7526104696a11420f7e19a9, type: 3}
+  m_Sprite: {fileID: 975489051, guid: ee2b19561c17e474ebf52f8f1315c4fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -283,6 +283,7 @@ MonoBehaviour:
   upgradeList:
   - {fileID: 11400000, guid: cdb0702712d2a3449a8104cfb2d5ce65, type: 2}
   - {fileID: 11400000, guid: 251edc853e7d6e448b6d46082b6be506, type: 2}
+  - {fileID: 11400000, guid: a0b60821443794c4d900cea268c6b50c, type: 2}
   bullet: {fileID: 270601367629545183, guid: 2808354d3f481f743a0c55a8ae84a4f6, type: 3}
   shootRange: 1
   shootSpeed: 3
@@ -311,8 +312,8 @@ BoxCollider2D:
   m_Offset: {x: -0.00096298754, y: 0.05466792}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.6315789, y: 0}
-    oldSize: {x: 0.19, y: 0.17}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.32, y: 0.32}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -329,7 +330,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3665464596320801807}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 22100000, guid: 90e088272f08b0347918991f026a97e6, type: 2}
   m_CullingMode: 0

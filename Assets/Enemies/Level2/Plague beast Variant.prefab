@@ -16,6 +16,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3307100119724747957, guid: a729b39af2abd624291650d654e5ad83, type: 3}
     - target: {fileID: 5968850613999886074, guid: aaf7de2a25d8a1943be9bacf3b9964a0, type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 11400000, guid: 163b1848ece21c64f8dd2ffdcc0d848c, type: 2}
+    - target: {fileID: 5968850613999886074, guid: aaf7de2a25d8a1943be9bacf3b9964a0, type: 3}
       propertyPath: health
       value: 60
       objectReference: {fileID: 0}
